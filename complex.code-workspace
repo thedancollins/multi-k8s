@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "server"
+		},
+		{
+			"path": "/Users/realdancollins/Documents/Code/udemy/nginx"
 		}
 	],
 	"settings": {}
