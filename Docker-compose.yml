@@ -47,7 +47,7 @@ services:
       context: ./worker
     volumes:
       - /app/node_modules
-      - ./client/app
+      - ./worker/app
     depends_on: 
       - redis
     environment:
