@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run currentanalytics/react-test npm test -- --coverage
 
-after_sucess:
+after_success:
   - docker build -t currentanalytics/multi-client ./client
   - docker build -t currentanalytics/multi-nginx ./nginx
   - docker build -t currentanalytics/multi-server ./server
