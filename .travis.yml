@@ -9,15 +9,15 @@ script:
   - docker run currentanalytics/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t currentanalytics/multi-client ./client
-  - docker build -t currentanalytics/multi-nginx ./nginx
-  - docker build -t currentanalytics/multi-server ./server
-  - docker build -t currentanalytics/multi-worker ./worker
+  - docker build -t currentanalyticsio/multi-client ./client
+  - docker build -t currentanalyticsio/multi-nginx ./nginx
+  - docker build -t currentanalyticsio/multi-server ./server
+  - docker build -t currentanalyticsio/multi-worker ./worker
 #log in to Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 #push those images to docker hub
-  - docker push currentanalytics/multi-client
-  - docker push currentanalytics/multi-nginx
-  - docker push currentanalytics/multi-server
-  - docker push currentanalytics/multi-worker
+  - docker push currentanalyticsio/multi-client
+  - docker push currentanalyticsio/multi-nginx
+  - docker push currentanalyticsio/multi-server
+  - docker push currentanalyticsio/multi-worker
   
