@@ -4,7 +4,7 @@
         {
             "name": "client",
             "image": "currentanalyticsio/multi-client",
-            "hostname": "client", //Comes from the services in docker-compose.yml
+            "hostname": "client", 
             "essential": false,
             "memory": 128
         },
