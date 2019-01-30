@@ -3,10 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t currentanalytics/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t currentanalyticsio/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run currentanalytics/react-test npm test -- --coverage
+  - docker run currentanalyticsio/react-test npm test -- --coverage
 
 after_success:
   - docker build -t currentanalyticsio/multi-client ./client
@@ -33,4 +33,3 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: $AWS_SECRET_KEY
-    
