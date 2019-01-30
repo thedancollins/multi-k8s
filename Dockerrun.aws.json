@@ -1,6 +1,6 @@
 {
     "AWSEBDockerrunVersion": 2,
-    "containerdefinitions": [
+    "containerDefinitions": [
         {
             "name": "client",
             "image": "currentanalyticsio/multi-client",
