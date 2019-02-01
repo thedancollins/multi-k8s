@@ -1,0 +1,7 @@
+git add .
+git commit -m "Video 195"
+git push origin master
+kubectl apply -f ./k8s
+kubectl get services
+kubectl get po
+kubectl get deployments
