@@ -11,11 +11,9 @@ env:
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-sevice-account --key-file service-account.json
-  # these commands will need to be run in a shell window on Google Cloud
   - gcloud config set project multi-k8-230417
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials multi-cluster
-  # these commands will need to be run in a shell window on Google Cloud
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t currentanalyticsio/react-test -f ./client/Dockerfile.dev ./client
 
