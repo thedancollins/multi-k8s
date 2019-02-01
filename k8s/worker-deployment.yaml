@@ -10,9 +10,9 @@ spec:
   template:
     metadata:
       labels:
-      component: worker
+        component: worker
     spec:
       containers:
         - name: worker
           image: currentanalyticsio/multi-worker
-          
+
