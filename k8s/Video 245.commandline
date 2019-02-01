@@ -1,0 +1,8 @@
+#on Google Cloud K8s Shell
+gcloud config set compute/zone us-central1-a
+gcloud container clusters get-credentials multi-cluster
+gcloud config set project multi-k8-230417
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=mypgpassword123
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
