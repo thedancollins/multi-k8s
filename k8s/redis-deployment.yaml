@@ -1,11 +1,19 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: redis-cluster-ip-service
+  name: redis-deployment
 spec:
-  type: ClusterIP
+  replicas: 1
   selector:
-    component: redis
-  ports:
-    - port: 6379
-      targetPort: 6379
+    matchLabels:
+      component: redis
+  templata:
+    metadata:
+      labels:
+        component: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis
+          ports:
+            - containerPort: 6379
