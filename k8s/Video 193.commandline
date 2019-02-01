@@ -1,0 +1,6 @@
+git add .
+git commit -m "Video 193.2 - worker-deployment.yaml"
+git push origin master
+kubectl apply -f ./k8s
+kubectl get deployments
+kubectl get services
