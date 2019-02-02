@@ -35,13 +35,15 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    //console.log(this.state);
+    console.log(this.state);
     if (this.state === null || this.state.seenIndexes === null || this.state.seenIndexes.length < 1) {
+      console.log('it was null');
       return null;
       }
-    //return 'hello'; 
-    else {}
-    return this.state.seenIndexes.map(({number}) => number).join(', ');}
+    else {
+      console.log('it was not null');
+      return this.state.seenIndexes.map(({number}) => number).join(', ');
+      }
     }
 
   renderValues() {
