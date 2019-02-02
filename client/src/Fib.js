@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Fib extends Component {
-  state = {
+  this.state = {
     seenIndexes: [],
     values: {},
     index: ''
@@ -35,7 +35,7 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    if (!Array.isArray(this.seenIndexes) && this.state.seenIndexes.length < 1) return null;
+    if (this.state.seenIndexes.length < 1) return null;
     return this.state.seenIndexes.map(({number}) => number).join(', ');
     }
 
