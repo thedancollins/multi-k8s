@@ -31,6 +31,7 @@ class Fib extends Component {
         console.log('Error', error.message);
       }
       console.log(error.config);
+    });
     this.setState({ values: values.data });
   }
 
@@ -52,6 +53,7 @@ class Fib extends Component {
         console.log('Error', error.message);
       }
       console.log(error.config);
+    });
     this.setState({
       seenIndexes: seenIndexes.data
     });
