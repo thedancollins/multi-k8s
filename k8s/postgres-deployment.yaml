@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: postgres-deployment
 spec:
   replicas: 1
@@ -12,9 +12,9 @@ spec:
       labels:
         component: postgres
     spec:
-      volumes: 
+      volumes:
         - name: postgres-storage
-          persistentVolumeClaim: 
+          persistentVolumeClaim:
             claimName: database-persistent-volume-claim
       containers:
         - name: postgres
@@ -27,8 +27,7 @@ spec:
               subPath: postgres
           env:
             - name: PGPASSWORD
-              valueFrom: 
+              valueFrom:
                 secretKeyRef:
                   name: pgpassword
                   key: PGPASSWORD
-
